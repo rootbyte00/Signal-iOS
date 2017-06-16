@@ -1716,6 +1716,9 @@ typedef enum : NSUInteger {
         [self.collectionView dequeueReusableCellWithReuseIdentifier:[OWSSystemMessageCell cellReuseIdentifier]
                                                        forIndexPath:indexPath];
     [cell configureWithInteraction:interaction];
+    cell.cellTopLabel.attributedText =
+        [self collectionView:self.collectionView attributedTextForCellTopLabelAtIndexPath:indexPath];
+
     cell.systemMessageCellDelegate = self;
 
     return cell;
