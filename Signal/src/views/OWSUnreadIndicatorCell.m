@@ -211,8 +211,8 @@ NS_ASSUME_NONNULL_BEGIN
     }
 }
 
-- (CGSize)cellSizeForInteraction:(TSUnreadIndicatorInteraction *)interaction
-             collectionViewWidth:(CGFloat)collectionViewWidth
+- (CGSize)bubbleSizeForInteraction:(TSUnreadIndicatorInteraction *)interaction
+               collectionViewWidth:(CGFloat)collectionViewWidth
 {
     CGSize result = CGSizeMake(collectionViewWidth, 0);
     result.height += self.titleVMargin * 2.f;

@@ -123,8 +123,8 @@ NS_ASSUME_NONNULL_BEGIN
         self.referenceSystemMessageCell = [OWSSystemMessageCell new];
     }
 
-    CGSize result = [self.referenceSystemMessageCell cellSizeForInteraction:interaction
-                                                        collectionViewWidth:layout.collectionView.width];
+    CGSize result = [self.referenceSystemMessageCell bubbleSizeForInteraction:interaction
+                                                          collectionViewWidth:layout.collectionView.width];
 
     [self.cache setObject:[NSValue valueWithCGSize:result] forKey:cacheKey];
 
@@ -147,8 +147,8 @@ NS_ASSUME_NONNULL_BEGIN
         self.referenceUnreadIndicatorCell = [OWSUnreadIndicatorCell new];
     }
 
-    CGSize result = [self.referenceUnreadIndicatorCell cellSizeForInteraction:interaction
-                                                          collectionViewWidth:layout.collectionView.width];
+    CGSize result = [self.referenceUnreadIndicatorCell bubbleSizeForInteraction:interaction
+                                                            collectionViewWidth:layout.collectionView.width];
 
     [self.cache setObject:[NSValue valueWithCGSize:result] forKey:cacheKey];
 
